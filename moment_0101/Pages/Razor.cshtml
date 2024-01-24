@@ -1,0 +1,48 @@
+﻿@page
+@model MyApp.Namespace.RazorModel
+@{
+     ViewData["Title"] = "Razor-sidan";
+}
+
+
+<div>
+    <h1>Här ska jag visa lite razor-syntax!</h1>
+    <h4>Först och främst: är det måndag idag?</h4>
+    <!--om det är måndag: -->
+     @if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+    {
+        //så skriver vi ut detta:
+        <p>Jajamensan så är det!</p>
+    }
+    else
+    {
+        //om det inte är det skriver vi ut detta:
+        <p>Nix-pix. it is @DateTime.Now.DayOfWeek !</p>
+    }
+
+    <h4>Så vilka kurser har jag läst?</h4>
+    <!-- Skapar en variabel med en array med kurser: -->
+    @{
+        string[] courses = {
+            "DT057G - Webbutveckling I",
+            "DT084G - Introduktion till programmering i JavaScript",
+            "DT200G - Grafisk teknik för webb",
+            "DT068G - Webbanvändbarhet",
+            "DT003G - Databaser",
+            "DT093G - Webbutveckling II",
+            "DT173G - Webbutveckling III",
+            "DT197G - Webbdesign för CMS",
+            "DT193G - Webbutveckling med ramverk",
+            "IK060G - Projektledning",
+            "DT071G - Programmering i C# .net",
+            "DT162G - Javascriptbaserad webbutveckling"
+        };
+    }
+    <ul>
+        <!-- loopar ut innehållet i enskilda listobjekt: -->
+        @foreach (var course in courses){
+            <li>@course</li>
+        }
+    </ul>
+    
+</div>

@@ -1,0 +1,31 @@
+﻿@page
+@model MyApp.Namespace.AboutModel
+@{
+     ViewData["Title"] = "Om mig";
+}
+
+<div>
+    <h1>Om mig:</h1>
+    <article>
+        <section class="intro">
+            <h3>Vem är jag?</h3>
+            <p>
+                Jag heter Simon Brandtman. Jag är 33 år gammal boende i skutskär i norra uppland med min familj (sambo, två barn + två hundar samt en katt).
+                Jag studerar för närvarande andra året på webbutvecklingsprogrammet vid mittuniversitetet.
+            </p>
+            <p>
+                Eftersom just denna specifika undersida existerar för att skriva om mig själv tänkte jag expandera informationen med lite "deep lore" om mig:
+                Jag avskyr att skriva om mig själv - har inte en enda rackarns aning om vad jag förväntas avslöja bortom det grundläggande (namn, bostadsort, sysselsättning och familjesituation).
+                så för att mörjliggöra för den här sidans syfte att uppfyllas kan vi se detta som lite fluff för att fylla utrymmet - ingen människa kan väl ändå 
+                se sig själv som så intressant att de frivilligt skriver en längre essä i ämnet! och ännu färre måste väl antalet människor som faktiskt uppskattar läsningen vara!
+            </p>
+        </section>
+        <section>
+            <h3>För den som intresserar sig:</h3>
+           <p> här under har jag inkluderat lite bonus content för den som är intresserad: 
+            Tryck på knappen för att demonstrera bandet mellan katt och ägare:</p>
+            <button id="showPic">Visa illustration</button>
+            <img src="me_plus_cat.jpg" alt="Jag och katten" id="plusContent">
+        </section>
+    </article>
+</div>

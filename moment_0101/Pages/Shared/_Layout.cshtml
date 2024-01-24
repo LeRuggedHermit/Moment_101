@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - moment_0101</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/moment_0101.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" alt="logo">
+        <div id="timebox">
+            <!-- använder razor-syntax för att printa ut datum & klockslag i önskat format: -->
+            <p>Tid och datum för ditt besök: @DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")</p>
+        </div>
+    </header>
+
+
+
+
+    <div class="container">
+        <aside>
+            <nav>
+                <ul>
+                    <li class="nav_li">
+                        <a class="navlink" asp-area="" asp-page="/Index">Hem</a>
+                    </li>
+                    <li class="nav_li">
+                        <a class="navlink" asp-area="" asp-page="/About">Om mig</a>
+                    </li>
+                     <li class="nav_li">
+                        <a class="navlink" asp-area="" asp-page="/Razor">Razor-sidan</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <p>Av Simon Brandtman. Kontakt: sibr2200@student.miun.se</p>
+    </footer>
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
